@@ -4,8 +4,6 @@ import com.md.nurkhan.beerapp.data.beers.local.IBeerLocalDataSource;
 import com.md.nurkhan.beerapp.data.beers.remote.IBeerRemoteDataSource;
 import com.md.nurkhan.beerapp.model.BeerEntity;
 
-import java.util.List;
-
 public class BeerRepository implements IBeersDataSource {
 
     private IBeerLocalDataSource mLocal;
@@ -18,11 +16,9 @@ public class BeerRepository implements IBeersDataSource {
     }
 
 
-
     @Override
-    public List<BeerEntity> getBeers() {
-        //sds
-        return  mLocal.loadBeers();
+    public void getBeers(BeerCallback collback) {
+
     }
 
     @Override
